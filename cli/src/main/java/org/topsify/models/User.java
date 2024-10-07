@@ -1,6 +1,8 @@
-package org.topsify;
+package org.topsify.models;
 
-public class User implements SqlInsertable{
+import org.topsify.utils.SqlInsertable;
+
+public class User implements SqlInsertable {
 
     public static String TABLE = "users";
 
