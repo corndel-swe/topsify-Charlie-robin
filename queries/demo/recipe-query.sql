@@ -4,7 +4,7 @@
 -- PLUGIN FOR INTELLIJ & SQL
 
 -- concat
-select recipe.name, ingredient.name
+select recipe.name, group_concat( ingredient.name, "," ) as ingredient
 from recipe
 join recipe_ingredients on recipe.id = recipe_ingredients.recipe_id
 join ingredient on ingredient.id = recipe_ingredients.ingredient_id
